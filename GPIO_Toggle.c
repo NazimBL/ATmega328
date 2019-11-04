@@ -1,5 +1,8 @@
 
-//    Bellabaci Nazim     04/09/2017
+/*
+* Bellabaci Nazim     04/09/2017
+* CodeBlocks
+/*
 
 #include <avr/io.h>
 #include <util/delay.h>
@@ -14,10 +17,7 @@ int main(){
   //toggle PORTB with 1 second delay
   PORTB=0x00;
   delay(1000);
-
   PORTB=0xFF;
   delay(1000);
-
   }
-
 }
