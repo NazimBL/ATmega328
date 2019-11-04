@@ -3,6 +3,7 @@
 
 void WGMconfig();
 int i=0,j=4;
+
 int tab[]={10000,12000,14000,16000,
            18000,20000,18000,
           16000,14000,12000,10000,
@@ -16,12 +17,10 @@ DDRB|=0xFF;
 WGMconfig();
 ICR1=19999;
 
-    while(1){
-
-        for(i=0;i<sizeof(tab);i++){
-
-                if(j+i>sizeof(tab))i=0;
-                OCR1A=ICR1-tab[i+j];
+while(1){
+   for(i=0;i<sizeof(tab);i++){
+        if(j+i>sizeof(tab))i=0;
+        OCR1A=ICR1-tab[i+j];
         }
     }
     return 0;
